@@ -1,25 +1,35 @@
 <!DOCTYPE html>
 <html>
-<head> <% include ./head %> </head>
+<head> <% include ./head %>
+    check
+
+    </head>
 <body>
 <% include ./header %>
 
     <a class="btn" href="/additem">Add New Item</a>
 
-    <div class="card">
+      <div class="card-panel deep orange lighten-3">
+
 
     <table class="highlight">
         <tr>
-            <th>Song</th><th>Singer</th><th>Added By</th><th>Likes</th><th>Actions</th>
+            <th>Song</th><th>Artist</th><th>Contributor</th><th>Link</th><th>Likes</th><th>Actions</th>
         </tr>
 
         <% items.forEach(function(item){  %>
 
+        <tr>
+        <td>
+            <%=item.Song%></td>
+            <td><%=item.Artist%></td>
+             <td><%=item.Contributor%></td>
+            <td><a href="<%=item.Link%>"><%=item.Link%></a></td>
+            <td></td>
+            <td><a></a></td>
+        </tr>
 
-
-
-
-        <% }) %>
+         <% }) %>
     </table>
 
     </div>
